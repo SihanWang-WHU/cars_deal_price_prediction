@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.model_selection import StratifiedKFold, KFold
 from itertools import product
 
+# 如果某一个特征是定性的（categorical），而这个特征的可能值非常多（高基数），那么平均数编码（mean encoding）是一种高效的编码方式。
 
 class MeanEncoder:
     def __init__(self, categorical_features, n_splits=10, target_type='classification', prior_weight_func=None):
